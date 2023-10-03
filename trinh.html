@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function over(button) {
+            const maxX = window.innerWidth - button.clientWidth;
+            const maxY = window.innerHeight - button.clientHeight;
+            const randomX = Math.random() * maxX/2;
+            const randomY = Math.random() * maxY/2;
+
+            button.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Trinh có yêu anh không??</h1>
+    <button onclick="alert('anh cũng yêu Trinh nhiều lắm ❤❤❤❤')">Có</button>
+    <button id="no" onmouseover="over(this)">Không</button>
+    <style>
+        #no {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</body>
+
+</html>
